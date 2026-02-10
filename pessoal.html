@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site do Lucas</title>
+    <link rel="stylesheet" href="pessoal.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="pessoal.html">início</a>
+            </li>
+            <li>
+                <a href="sobre.html">Sobre</a>
+            </li>
+            <li>
+                <a href="port.html"> portfólio</a>
+            </li>
+            <li>
+                <a href="novidades.html">novidades</a>
+            </li>
+            <li>
+                <a href="contatos.html">contatos</a>
+            </li>
+        </ul>
+        <hr>
+    </nav>
+    <header>
+        <div class="inicio">
+            <h1>Sejam bem vindos ao meu portfólio!!!</h1>
+            <div class="text">
+                <p>Sou estudante de Análise e Desenvolvimento de Sistemas e estou em constante evolução no mundo da
+                    tecnologia.</p>
+                <p> Este espaço reúne alguns dos meus projetos e aprendizados</p>
+            </div>
+            <img src="/708A0C4D-82DC-414E-AD41-EEBAE9E14A3E.jpg"></img>
+        </div>
+    </header>
+    
+    <footer>
+        <hr>
+        <div class="text">
+            <main>
+                <p id="mensagem"></p>
+                <p id="dataHora"></p>
+            </main>
+
+            <script>
+
+                const mensagem = document.getElementById("mensagem");
+                const hora = new Date().getHours();
+                let saudacao = "";
+
+                if (hora < 12) {
+                    saudacao = "Bom dia!";
+                } else if (hora < 18) {
+                    saudacao = "Boa tarde!";
+                } else {
+                    saudacao = "Boa noite!";
+                }
+
+                mensagem.textContent = saudacao + " Obrigado por visitar meu portfólio.";
+
+
+                function atualizarHora() {
+                    const agora = new Date();
+                    document.getElementById("dataHora").textContent =
+                        "Data e hora atual: " + agora.toLocaleString("pt-BR");
+                }
+
+                atualizarHora();
+                setInterval(atualizarHora, 1000); 
+            </script>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+body{
+    color: white;
+    background-color: black;
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    min-height: 100vh;            
+}
+ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    align-items: center;
+    gap: 70px;
+}
+
+a:hover{
+    color: #00bcd4;
+}
+a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #00bcd4;
+    transition: width 0.3s ease;
+}
+a:hover::after {
+    width: 100%;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+    font-family: 'Poppins', sans-serif; 
+    letter-spacing: 1px; 
+    text-transform: uppercase; 
+}
+
+
+.texto-com-foto img{
+    border-radius: 10%;
+    border: 1px solid white;
+    height: auto;
+    width: 400px;
+
+}
+
+.texto-com-foto{
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+     text-align: center;
+    margin-top: 70px;
+}
+.sobre{
+    text-align: center;
+    margin-top: 70px;
+}
+.sobre2{
+    text-align: center;
+     border: 2px solid white;  
+    padding: 20px;             
+    margin: 20px auto;         
+    width: 60%;                
+    text-align: center;        
+    border-radius: 10px;       
+}
+.contato{
+    margin-top: 90px;
+    display: flex;
+}
+.inicio{
+    text-align: center;
+    margin-top: 70px;
+
+}
+.inicio img{
+    height: 450px;
+    width: 350px;  
+     border-radius: 15%;
+    border: 1px solid white;
+    margin-top: 50px;
+}/*mexer nisso aqui*/
+form {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px; 
+    margin: 0 auto; 
+}
+
+form input, form textarea {
+    width: 100%; 
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+
+form button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #00bcd4;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0097a7;
+}
+.redes{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 5px;
+}
+.redes img{
+    width: 25px;
+    height: auto;
+}
+.text{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 20px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  color: white;
+  text-align: center;
+  padding: 15px;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pessoal.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="pessoal.html">início</a>
+            </li>
+            <li>
+                <a href="sobre.html">Sobre</a>
+            </li>
+            <li>
+                <a href="port.html"> portfólio</a>
+            </li>
+            <li>
+                <a href="novidades.html">novidades</a>
+            </li>
+            <li>
+                <a href="contatos.html">contatos</a>
+            </li>
+        </ul>
+        <hr>
+    </nav>
+    <div class="sobre">
+        <h1>Sobre:</h1>
+    </div>
+    <div class="sobre2">
+        <div class="text">
+            <P>Lucas Carvalho do Nascimento</P>
+            <p>Curso:
+                Análise e Desenvolvimento de Sistemas – Universidade Veiga de Almeida – Início: 2º semestre de 2025</p>
+
+            <p>Objetivo:
+                Ingressar na área de tecnologia, aplicando conhecimentos em desenvolvimento web e contribuindo com
+                dedicação e aprendizado contínuo.</p>
+
+            <P>Projetos Acadêmicos:
+                Loja Web de Salgadinhos,projeto acadêmico desenvolvido em equipe utilizando HTML, CSS e JavaScript, sistema Backend usando SQL, banco de dados, SE (sistema especialista) sobre restauro de quadros. </P>
+        </div>
+    </div>
+
+    <footer>
+        <hr>
+        <div class="text">
+            <main>
+                <p id="mensagem"></p>
+                <p id="dataHora"></p>
+            </main>
+
+            <script>
+
+                const mensagem = document.getElementById("mensagem");
+                const hora = new Date().getHours();
+                let saudacao = "";
+
+                if (hora < 12) {
+                    saudacao = "Bom dia!";
+                } else if (hora < 18) {
+                    saudacao = "Boa tarde!";
+                } else {
+                    saudacao = "Boa noite!";
+                }
+
+                mensagem.textContent = saudacao + " Obrigado por visitar meu portfólio.";
+
+
+                function atualizarHora() {
+                    const agora = new Date();
+                    document.getElementById("dataHora").textContent =
+                        "Data e hora atual: " + agora.toLocaleString("pt-BR");
+                }
+
+                atualizarHora();
+                setInterval(atualizarHora, 1000);
+            </script>
+        </div>
+    </footer>
+</body>
+
+</html>
